@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.comicflix.MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splashname">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        >
+
+        <Button
+            android:id="@+id/basicplan"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:background="@drawable/bordercard"
+            android:text="Basic Plan"
+            android:textColor="@color/splashname"
+            android:textSize="40sp"
+            android:layout_margin="10dp"
+            />
+
+        <Button
+            android:id="@+id/premiumPlan"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:background="@drawable/bordercard"
+            android:text="Premium Plan"
+            android:textColor="@color/splashname"
+            android:textSize="35sp"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
