@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.comicflix.ProfileActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/profileTabBar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_profile"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:padding="5dp">
 
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="5dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:layout_gravity="center"
-                android:gravity="center_vertical"
-                android:fontFamily="@font/montserrat"
-                android:textAlignment="center"
-                android:text="Streaming Best Geek"
-                android:textStyle="bold"
-                android:textColor="@color/GhostWhite"
-                android:textSize="26sp" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/candyapple"/>
+
+
+            </LinearLayout>
 
 
         </androidx.appcompat.widget.Toolbar>
@@ -42,57 +44,33 @@
             app:tabMode="scrollable"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp"
+            android:textAlignment="center"
+            app:tabGravity="center"
             app:tabTextColor="@color/GhostWhite"
-            app:tabIndicatorColor="@color/candyapple">
+            app:tabIndicatorColor="@color/GhostWhite">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Anime">
+                android:text="Playlist">
 
             </com.google.android.material.tabs.TabItem>
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manga">
+                android:text="Downloads">
 
             </com.google.android.material.tabs.TabItem>
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cartoon">
+                android:text="Watchlist">
 
             </com.google.android.material.tabs.TabItem>
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tutorial">
 
-            </com.google.android.material.tabs.TabItem>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gaming">
-
-            </com.google.android.material.tabs.TabItem>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Movies">
-
-            </com.google.android.material.tabs.TabItem>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TV Show">
-
-            </com.google.android.material.tabs.TabItem>
 
 
         </com.google.android.material.tabs.TabLayout>
@@ -122,10 +100,10 @@
                     android:id="@+id/relativeViewPager"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                   >
+                    >
 
                     <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/bannerViewPager"
+                        android:id="@+id/bannerViewPagerprofile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
 
@@ -145,7 +123,7 @@
                     android:layout_below="@+id/relativeViewPager">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/mainRecyclerview"
+                        android:id="@+id/profileRecyclerview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"/>
@@ -159,6 +137,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

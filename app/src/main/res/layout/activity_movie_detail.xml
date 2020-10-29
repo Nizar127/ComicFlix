@@ -72,7 +72,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/audiowide"
-        android:text="TextView"
+        android:text="Video Description"
         android:textAlignment="viewStart"
         android:textColor="@color/GhostWhite"
         android:textSize="20sp"
@@ -89,6 +89,50 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vidDetail">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/profileTabBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:paddingEnd="30dp"
+                android:textAlignment="center"
+                app:tabGravity="center"
+                app:tabTextColor="@color/GhostWhite"
+                app:tabIndicatorColor="@color/GhostWhite">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Episodes"
+                    >
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Merchandise">
+
+                </com.google.android.material.tabs.TabItem>
+
+
+
+
+
+
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
     </FrameLayout>

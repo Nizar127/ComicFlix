@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.comicflix.VideoPlayerActivity"
-            android:screenOrientation="nosensor"/>
+        <activity android:name="com.comicflix.Profile.SettingActivity" />
+        <activity android:name="com.comicflix.ProfileActivity" />
+        <activity
+            android:name="com.comicflix.VideoPlayerActivity"
+            android:screenOrientation="nosensor" />
         <activity android:name="com.comicflix.MovieDetailActivity" />
         <activity android:name="com.comicflix.StartView" />
         <activity android:name="com.comicflix.MainActivity">
