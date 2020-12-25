@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_merchandise"
+            android:icon="@drawable/home"
+            android:title="Merchandise" />
+        <item
+            android:id="@+id/nav_manga"
+            android:icon="@drawable/manga_stream"
+            android:title="Manga Stream" />
+        <item
+            android:id="@+id/nav_community"
+            android:icon="@drawable/community"
+            android:title="Community" />
+    </group>
+    <item android:title="Profile"
+        android:iconTint="@color/GhostWhite">
+        <menu>
+            <item
+                android:id="@+id/nav_playlist"
+                android:icon="@drawable/playlist"
+                android:title="Playlist" />
+            <item
+                android:id="@+id/nav_watchlist"
+                android:icon="@drawable/bookmart"
+                android:title="Watchlist" />
+            <item
+                android:id="@+id/nav_download"
+                android:icon="@drawable/bookmart"
+                android:title="Download" />
+            <item
+                android:id="@+id/nav_changePlan"
+                android:title="Change Plan" />
+        </menu>
+    </item>
+    <item android:title="Privacy">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/security"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/security"
+                android:title="Settings" />
+        </menu>
+    </item>
+
+</menu>

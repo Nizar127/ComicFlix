@@ -33,7 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="10dp"
         android:fontFamily="@font/montserrat"
         android:text="Movie Name"
         android:textSize="30sp"
@@ -41,12 +40,99 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movieImg" />
 
+
+    <LinearLayout
+        android:id="@+id/views"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/uploader"
+        app:layout_constraintTop_toBottomOf="@+id/movieName"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/movieView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:fontFamily="@font/montserrat"
+            android:text="1K"
+            android:textColor="@color/GhostWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/viewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Views"
+            android:textColor="@color/GhostWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/uploader"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/play_button"
+        app:layout_constraintTop_toBottomOf="@+id/views"
+        tools:layout_editor_absoluteX="0dp"
+        android:background="@drawable/input_design">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgPublisher"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/seafood"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/namePublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video_Publisher"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/GhostWhite"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow"
+                android:textStyle="bold"
+                android:textColor="@color/candyapple"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="40dp"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/play_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/image_blue_border"
         android:drawableLeft="@drawable/ic_play_circle_filled_black_24dp"
@@ -60,17 +146,59 @@
         android:textColor="@color/GhostWhite"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/vidDetail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/movieName" />
+        app:layout_constraintTop_toBottomOf="@+id/uploader"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/btnFunction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/vidDetail"
+        app:layout_constraintTop_toBottomOf="@+id/play_button">
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/playlist" />
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_file_download_black_24dp" />
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/bookmart" />
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/share" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/vidDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/audiowide"
         android:text="Video Description"
         android:textAlignment="viewStart"
@@ -80,42 +208,86 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/play_button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFunction"
+        app:layout_constraintBottom_toTopOf="@+id/vidReview"/>
+
+<FrameLayout
+    android:id="@+id/vidReview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:layout_constraintTop_toBottomOf="@+id/vidDetail"
+    android:background="@drawable/input_design">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="10dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Review"
+               android:textStyle="bold"
+               android:textColor="@color/GhostWhite"
+               android:textSize="20sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeViewPager">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reviewRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+</FrameLayout>
 
     <FrameLayout
+        android:id="@+id/frameLayouttab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vidDetail">
+        app:layout_constraintTop_toBottomOf="@+id/vidReview">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/profileTabBar"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabMode="scrollable"
                 android:layout_marginTop="3dp"
                 android:layout_marginEnd="3dp"
                 android:paddingEnd="30dp"
                 android:textAlignment="center"
                 app:tabGravity="center"
-                app:tabTextColor="@color/GhostWhite"
-                app:tabIndicatorColor="@color/GhostWhite">
+                app:tabIndicatorColor="@color/candyapple"
+                app:tabMode="scrollable"
+                app:tabTextColor="@color/GhostWhite">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Episodes"
-                    >
+                    android:text="Episodes">
 
                 </com.google.android.material.tabs.TabItem>
 
@@ -127,11 +299,23 @@
                 </com.google.android.material.tabs.TabItem>
 
 
-
-
-
-
             </com.google.android.material.tabs.TabLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeViewPager">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tabDetailRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+
+
+            </LinearLayout>
+
         </com.google.android.material.appbar.AppBarLayout>
 
 

@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DrawerActivity"></activity>
+        <activity android:name="com.comicflix.Basic_plan.MovieDetailBasicActivity" />
+        <activity android:name="com.comicflix.Basic_plan.StartViewBasicActivity" />
         <activity android:name="com.comicflix.Profile.SettingActivity" />
         <activity android:name="com.comicflix.ProfileActivity" />
         <activity
