@@ -41,6 +41,10 @@
     <item android:title="Privacy">
         <menu>
             <item
+                android:id="@+id/nav_aboutUS"
+                android:icon="@drawable/security"
+                android:title="About Us" />
+            <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/security"
                 android:title="Privacy Policy" />

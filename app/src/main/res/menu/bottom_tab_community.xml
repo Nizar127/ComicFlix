@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home_community"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/tab_Explore_community"
+        android:icon="@drawable/explore"
+        android:title="Explore" />
+    <item
+        android:id="@+id/tab_search_community"
+        android:icon="@drawable/nav_search"
+        android:title="Search" />
+    <item
+        android:id="@+id/tab_profile_community"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile" />
+
+</menu>

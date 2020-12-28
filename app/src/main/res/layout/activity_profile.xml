@@ -29,7 +29,8 @@
                     android:layout_height="35dp"
                     android:src="@drawable/person"
                     app:civ_border_color="@color/GhostWhite"
-                    app:civ_border_width="2dp" />
+                    app:civ_border_width="2dp"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -49,27 +50,21 @@
                             android:textColor="@color/GhostWhite"/>
 
                         <ImageView
-                            android:layout_width="40dp"
+                            android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:src="@drawable/dropdown"/>
 
 
                     </LinearLayout>
 
-                    <Button
-                        android:layout_width="100dp"
-                        android:layout_height="28dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Change Plan"
-                        android:textColor="@color/splashname"
-                        android:textSize="30sp" />
-
-
-
+                        android:textStyle="bold"
+                        android:textColor="@color/candyapple"/>
 
                 </LinearLayout>
-
-
-
 
             </LinearLayout>
 

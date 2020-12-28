@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp">
+
+            <ImageView
+                android:id="@+id/episode_poster"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/zoro"/>
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/episode_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Episode 1"
+                    android:textColor="@color/splashname"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat"/>
+
+                <TextView
+                    android:id="@+id/episode_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Small Description"
+                    android:textColor="@color/splashname"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat"/>
+            </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/play_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/play_button"
+                    android:layout_gravity="center_vertical"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

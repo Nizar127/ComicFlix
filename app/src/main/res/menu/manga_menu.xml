@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/manga_genre_nav"
+        android:title="Manga Genre" />
+
+    <item
+        android:id="@+id/manga_popular_nav"
+        android:title="Popular Comics" />
+
+    <item
+        android:id="@+id/suprise_comic_nav"
+        android:title="Suprise Comic" />
+
+    <item
+        android:id="@+id/comic_universe_nav"
+        android:title="Comic Universe" />
+
+
+
+</menu>
