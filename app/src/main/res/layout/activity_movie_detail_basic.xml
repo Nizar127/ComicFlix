@@ -141,7 +141,7 @@
             android:paddingStart="40dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Start Over"
+            android:text="Play This Video"
             android:textAlignment="viewStart"
             android:textColor="@color/GhostWhite"
             android:textSize="20sp"
@@ -169,19 +169,21 @@
             app:layout_constraintTop_toBottomOf="@+id/play_button">
 
             <ImageView
+                android:id="@+id/previewBasic"
                 android:layout_width="53dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/playlist" />
-
+                android:src="@drawable/preview" />
 
             <ImageView
+                android:id="@+id/bookmarkBasic"
                 android:layout_width="53dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/bookmart" />
+                android:src="@drawable/favourite" />
 
             <ImageView
+                android:id="@+id/shareBasic"
                 android:layout_width="53dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="30dp"
@@ -277,6 +279,7 @@
                     android:textAlignment="center"
                     app:tabGravity="center"
                     app:tabIndicatorColor="@color/candyapple"
+                    app:tabIndicatorHeight="3sp"
                     app:tabMode="scrollable"
                     app:tabTextColor="@color/GhostWhite">
 
@@ -291,6 +294,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Merchandise">
+
+                    </com.google.android.material.tabs.TabItem>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="More Like This">
+
 
                     </com.google.android.material.tabs.TabItem>
 

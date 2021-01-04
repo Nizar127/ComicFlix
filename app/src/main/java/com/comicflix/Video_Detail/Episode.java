@@ -1,5 +1,6 @@
 package com.comicflix.Video_Detail;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +14,16 @@ import com.comicflix.comicflix.R;
 
 public class Episode extends Fragment {
 
+
+    
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_episode, container, false);
+        return inflater.inflate(R.layout.episode_item, container, false);
     }
 }

@@ -6,7 +6,6 @@ public class BannerAnime {
     String ImgUrl;
     String fileUrl;
 
-
     public BannerAnime(Integer id, String animeMovies, String imgUrl, String fileUrl) {
         this.id = id;
         this.animeMovies = animeMovies;

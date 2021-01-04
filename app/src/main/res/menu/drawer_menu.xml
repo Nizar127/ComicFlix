@@ -7,7 +7,7 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_merchandise"
-            android:icon="@drawable/home"
+            android:icon="@drawable/merchandise"
             android:title="Merchandise" />
         <item
             android:id="@+id/nav_manga"
@@ -21,20 +21,21 @@
     <item android:title="Profile"
         android:iconTint="@color/GhostWhite">
         <menu>
-            <item
-                android:id="@+id/nav_playlist"
-                android:icon="@drawable/playlist"
-                android:title="Playlist" />
+<!--            <item-->
+<!--                android:id="@+id/nav_playlist"-->
+<!--                android:icon="@drawable/playlist"-->
+<!--                android:title="Playlist" />-->
             <item
                 android:id="@+id/nav_watchlist"
                 android:icon="@drawable/bookmart"
-                android:title="Watchlist" />
+                android:title="My List" />
             <item
                 android:id="@+id/nav_download"
                 android:icon="@drawable/bookmart"
                 android:title="Download" />
             <item
                 android:id="@+id/nav_changePlan"
+                android:icon="@drawable/change_plan"
                 android:title="Change Plan" />
         </menu>
     </item>
@@ -49,7 +50,7 @@
                 android:icon="@drawable/security"
                 android:title="Privacy Policy" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_settings"
                 android:icon="@drawable/security"
                 android:title="Settings" />
         </menu>

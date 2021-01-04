@@ -3,7 +3,7 @@
 
     <stroke
         android:color="@color/GhostWhite"
-        android:width="2dp"></stroke>
+        android:width="6dp"></stroke>
 
 
 

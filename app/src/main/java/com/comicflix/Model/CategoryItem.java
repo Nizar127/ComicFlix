@@ -1,35 +1,26 @@
 package com.comicflix.Model;
 
 public class CategoryItem {
-    Integer id;
+    Integer catid;
     String AnimeName;
     String ImgUrl;
     String fileUrl;
     String catName;
 
-    public CategoryItem(Integer id, String animeName, String imgUrl, String fileUrl, String catName) {
-        this.id = id;
+    public CategoryItem(Integer catid, String animeName, String imgUrl, String fileUrl, String catName) {
+        this.catid = catid;
         AnimeName = animeName;
         ImgUrl = imgUrl;
         this.fileUrl = fileUrl;
         this.catName = catName;
     }
 
-
-    public String getCatName() {
-        return catName;
+    public Integer getCatid() {
+        return catid;
     }
 
-    public void setCatName(String catName) {
-        this.catName = catName;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCatid(Integer catid) {
+        this.catid = catid;
     }
 
     public String getAnimeName() {
@@ -54,5 +45,13 @@ public class CategoryItem {
 
     public void setFileUrl(String fileUrl) {
         this.fileUrl = fileUrl;
+    }
+
+    public String getCatName() {
+        return catName;
+    }
+
+    public void setCatName(String catName) {
+        this.catName = catName;
     }
 }

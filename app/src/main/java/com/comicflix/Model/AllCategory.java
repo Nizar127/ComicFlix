@@ -14,14 +14,6 @@ public class AllCategory {
         this.categoryItemList = categoryItemList;
     }
 
-    public List<CategoryItem> getCategoryItemList() {
-        return categoryItemList;
-    }
-
-    public void setCategoryItemList(List<CategoryItem> categoryItemList) {
-        this.categoryItemList = categoryItemList;
-    }
-
     public Integer getCategoryId() {
         return categoryId;
     }
@@ -36,5 +28,13 @@ public class AllCategory {
 
     public void setCategoryTitle(String categoryTitle) {
         this.categoryTitle = categoryTitle;
+    }
+
+    public List<CategoryItem> getCategoryItemList() {
+        return categoryItemList;
+    }
+
+    public void setCategoryItemList(List<CategoryItem> categoryItemList) {
+        this.categoryItemList = categoryItemList;
     }
 }

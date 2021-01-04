@@ -113,6 +113,7 @@
                 android:textColor="@color/GhostWhite"/>
 
             <Button
+                android:id="@+id/btnSubscribe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Follow"
@@ -141,7 +142,7 @@
         android:paddingStart="40dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="Start Over"
+        android:text="Play This Video"
         android:textAlignment="viewStart"
         android:textColor="@color/GhostWhite"
         android:textSize="20sp"
@@ -161,6 +162,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
         android:padding="20dp"
         android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,23 +171,27 @@
         app:layout_constraintTop_toBottomOf="@+id/play_button">
 
         <ImageView
+            android:id="@+id/previewID"
             android:layout_width="53dp"
             android:layout_height="40dp"
             android:layout_marginEnd="30dp"
-            android:src="@drawable/playlist" />
+            android:src="@drawable/preview" />
 
         <ImageView
+            android:id="@+id/downloadBtn"
             android:layout_width="53dp"
             android:layout_height="40dp"
             android:layout_marginEnd="30dp"
             android:src="@drawable/ic_file_download_black_24dp" />
         <ImageView
+            android:id="@+id/bookmark"
             android:layout_width="53dp"
             android:layout_height="40dp"
             android:layout_marginEnd="30dp"
-            android:src="@drawable/bookmart" />
+            android:src="@drawable/favourite" />
 
         <ImageView
+            android:id="@+id/shareBtn"
             android:layout_width="53dp"
             android:layout_height="40dp"
             android:layout_marginEnd="30dp"
@@ -281,6 +287,7 @@
                 android:textAlignment="center"
                 app:tabGravity="center"
                 app:tabIndicatorColor="@color/candyapple"
+                app:tabIndicatorHeight="3sp"
                 app:tabMode="scrollable"
                 app:tabTextColor="@color/GhostWhite">
 

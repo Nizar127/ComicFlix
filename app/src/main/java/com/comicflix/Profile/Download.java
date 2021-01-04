@@ -1,5 +1,6 @@
 package com.comicflix.Profile;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,17 @@ import androidx.fragment.app.Fragment;
 
 import com.comicflix.comicflix.R;
 
-public class Watchlist_Tab extends Fragment {
+public class Download extends Fragment {
+
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.watchlist_tab, container, false);
+        return inflater.inflate(R.layout.download_item, container, false);
     }
 }

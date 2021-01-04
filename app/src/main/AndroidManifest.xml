@@ -11,13 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.comicflix.Manga_Stream.SupriseComicActivity"></activity>
+        <activity android:name="com.comicflix.PlanSubscription"></activity>
+        <activity android:name="com.SearchActivity" />
+        <activity android:name="com.comicflix.Manga_Stream.SupriseComicActivity" />
         <activity android:name="com.comicflix.Manga_Stream.PopularComicActivity" />
         <activity android:name="com.comicflix.Manga_Stream.MangaGenreActivity" />
         <activity android:name="com.comicflix.Manga_Stream.ComicUniverseActivity" />
         <activity android:name="com.comicflix.Manga_Stream.MangaStreamActivity" />
         <activity android:name="com.comicflix.Community.CommunityActivity" />
-        <activity android:name=".DrawerActivity" />
+        <activity android:name="com.comicflix.Drawer.DrawerActivity" />
         <activity android:name="com.comicflix.Basic_plan.MovieDetailBasicActivity" />
         <activity android:name="com.comicflix.Basic_plan.StartViewBasicActivity" />
         <activity android:name="com.comicflix.Profile.SettingActivity" />

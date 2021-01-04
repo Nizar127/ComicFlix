@@ -9,8 +9,9 @@
         android:layout_height="match_parent">
 
 
+
         <LinearLayout
-            android:id="@+id/downloadOption"
+            android:id="@+id/favouriteOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
@@ -22,40 +23,37 @@
                 android:src="@drawable/arrow_back_again"
                 android:layout_gravity="center_vertical"/>
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Favourite"
                 android:textSize="30sp"
                 android:layout_marginStart="10dp"
-                android:text="All download"
                 android:textColor="@color/GhostWhite"
                 android:padding="10dp"
                 android:fontFamily="@font/montserrat"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/favouriteChoose"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="37dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/dropdown" />
+                android:src="@drawable/dropdown"/>
         </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/downloadRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:layout_below="@+id/downloadOption"
-                >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favouriteRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/favouriteOption"
+            android:padding="7dp">
 
 
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-
-
+        </androidx.recyclerview.widget.RecyclerView>
 
     </RelativeLayout>
 

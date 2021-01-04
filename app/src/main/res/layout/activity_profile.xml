@@ -18,13 +18,20 @@
             android:layout_height="?attr/actionBarSize"
             android:padding="5dp">
 
+            <Button
+                android:id="@+id/drawer_open"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hamburger_menu" />
+
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:gravity="start"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImgProfile"
                     android:layout_width="52dp"
                     android:layout_height="35dp"
                     android:src="@drawable/person"
@@ -37,11 +44,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+
 
                         <TextView
+                            android:id="@+id/userNameProfile"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Profile"
@@ -49,20 +55,26 @@
                             android:textStyle="bold"
                             android:textColor="@color/GhostWhite"/>
 
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/dropdown"/>
 
 
-                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Change Plan"
                         android:textStyle="bold"
-                        android:textColor="@color/candyapple"/>
+                        android:textColor="@color/OrangeRed"/>
+
+                    <ImageView
+                        android:id="@+id/dropdown"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dropdown"/>
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -71,7 +83,7 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <com.google.android.material.tabs.TabLayout
+       <!-- <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,12 +93,13 @@
             android:textAlignment="center"
             app:tabGravity="center"
             app:tabTextColor="@color/GhostWhite"
-            app:tabIndicatorColor="@color/candyapple">
+            app:tabIndicatorColor="@color/candyapple"
+            app:tabIndicatorHeight="3sp">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Playlist">
+                android:text="My List">
 
             </com.google.android.material.tabs.TabItem>
 
@@ -100,14 +113,14 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Watchlist">
+                android:text="Merchandise">
 
             </com.google.android.material.tabs.TabItem>
 
 
 
 
-        </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.tabs.TabLayout>-->
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -133,36 +146,173 @@
                 <RelativeLayout
                     android:id="@+id/relativeViewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="200dp"
                     >
+
+<!--                    do like cover flow/carousel
+preview-->
 
                     <androidx.viewpager.widget.ViewPager
                         android:id="@+id/bannerViewPagerprofile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
 
-                    <com.google.android.material.tabs.TabLayout
-                        android:id="@+id/tabIndicator"
-                        android:layout_width="wrap_content"
+                    <it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
+                        android:id="@+id/coverflow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:coverHeight="@dimen/cover_height"
+                        app:coverWidth="@dimen/cover_width"
+                        app:maxScaleFactor="1.5"
+                        app:reflectionGap="0px"
+                        app:rotationThreshold="0.5"
+                        app:scalingThreshold="0.5"
+                        app:spacing="0.6"
+                         />
+
+<!--                    <TextSwitcher
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:tabIndicatorHeight="0dp"
-                        app:tabBackground="@drawable/indicator_selector" />
+                        android:paddingBottom="16dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true" />-->
+
+                  
 
 
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/continueWatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/relativeViewPager">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/profileRecyclerview"
+                        android:id="@+id/historyRecyclerview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"/>
 
 
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/continueWatch"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/favouriteView"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/input_design"
+                            android:elevation="20dp"
+                            android:layout_margin="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_file_download_black_24dp" />
+
+                          <Button
+                              android:id="@+id/watchDwnldBtn"
+                              android:layout_width="80dp"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/profile_btn3"
+                              android:text="Download"
+                              android:padding="3dp"
+                              android:layout_gravity="center_horizontal"
+                              android:textColor="@color/GhostWhite"
+                              android:layout_marginBottom="14dp"
+                              android:textSize="10sp"
+                              />
+
+                          <!--  <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:padding="13dp"
+                                android:text="Watch Download"
+                                android:gravity="center"
+                                android:textColor="@color/GhostWhite"
+                                android:textSize="10sp" />
+-->
+                        </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/bookmartView"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/input_design"
+                        android:elevation="20dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/favourite" />
+
+                        <Button
+                            android:id="@+id/mylistBtn"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/profile_btn2"
+                            android:text="My List"
+                            android:padding="3dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/GhostWhite"
+                            android:layout_marginBottom="14dp"
+                            android:textSize="10sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/input_design"
+                        android:elevation="20dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:id="@+id/favouriteimage"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/shoppingbasket" />
+
+                        <Button
+                            android:id="@+id/shopMerchandiseBtn"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/profile_btn"
+                            android:text="Merchandise"
+                            android:padding="3dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/GhostWhite"
+                            android:layout_marginBottom="14dp"
+                            android:textSize="10sp"
+                            />
+                    </LinearLayout>
+                    
                 </LinearLayout>
 
 
